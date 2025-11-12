@@ -28,8 +28,8 @@ SELECT
     ROUND(AVG(DATEDIFF(departure_date, arrival_date)), 2) AS average_stay
 FROM patients
 GROUP BY service
-HAVING AVG(DATEDIFF(departure_date, arrival_date)) > 7
-ORDER BY AVG(DATEDIFF(departure_date, arrival_date)) DESC
+HAVING ROUND(AVG(DATEDIFF(departure_date, arrival_date)), 2) > 7
+ORDER BY ROUND(AVG(DATEDIFF(departure_date, arrival_date)), 2) DESC
 
 
 
