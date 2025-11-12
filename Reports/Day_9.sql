@@ -25,7 +25,7 @@ GROUP BY date_format(arrival_date, "%Y %M");
 SELECT 
 	service,
     COUNT(patient_id) AS Total_Patients,
-    AVG(DATEDIFF(departure_date, arrival_date)) AS average_stay
+    ROUND(AVG(DATEDIFF(departure_date, arrival_date)), 2) AS average_stay
 FROM patients
 GROUP BY service
 HAVING AVG(DATEDIFF(departure_date, arrival_date)) > 7
