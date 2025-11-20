@@ -103,7 +103,7 @@ FROM order_details;
 
 -- Average pizza price (AVG).
 SELECT
-	ROUND(AVG(price), 2) AS Avg_pize_price
+	ROUND(AVG(price), 2) AS Avg_pizza_price
 FROM pizzas;
 
 -- Total order value per order (JOIN, SUM, GROUP BY).
