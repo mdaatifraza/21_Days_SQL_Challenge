@@ -73,8 +73,6 @@ calls_window AS (
     FROM calls c
     WHERE c.call_time BETWEEN '2025-10-15 20:50:00' AND '2025-10-15 21:00:00'
 )
-    
-    
 SELECT 
 	e.name AS murderer_name,
     m.room AS actual_room,
